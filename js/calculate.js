@@ -40,9 +40,7 @@ function areaDisplay(name, area) {
     newLi.classList.add('list-group-item', 'd-flex', 'text-center','justify-content-center');
     let newLiText = document.createTextNode(count + ". " + name + " " + twoDecimal(area) + "cm");
 
-    console.log(newLiText);
     newLi.appendChild(newLiText);
-    console.log(newLi);
     ulElement.appendChild(newLi);
 
     const newSup = document.createElement("sup");
@@ -56,7 +54,6 @@ function areaDisplay(name, area) {
     mBtn.appendChild(newSup)
     mBtn.classList.add('btn-primary', 'rounded')
     newLi.appendChild(mBtn);
-    console.log(mBtn)
 
     mBtn.addEventListener('click', function () {
         newLi.innerText = count + ". " + name + " " + twoDecimal(area/10)  + "m";
