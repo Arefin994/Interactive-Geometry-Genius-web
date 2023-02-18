@@ -34,6 +34,7 @@ function notPosNumber(){
     You can also convert the value in m^2 form */
 let count = 0;
 function areaDisplay(name, area) {
+    area = twoDecimal(area);
     const ulElement = document.getElementById("areaShow");
     let newLi = document.createElement("li");
     newLi.classList.add('list-group-item', 'd-flex', 'text-center','justify-content-center');
@@ -139,7 +140,7 @@ function calculateEllipseArea() {
         twoDecimal(area)
         document.getElementById("ell-area").innerHTML = "Area = " + twoDecimal(area) + " sq.cm";
         count++;
-        areaDisplay('Ellipse', area);
+        areaDisplay('Ellipse', twoDecimal(area));
     } else {
         notPosNumber();
     }
