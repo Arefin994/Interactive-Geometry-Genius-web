@@ -59,7 +59,7 @@ function areaDisplay(name, area) {
     console.log(mBtn)
 
     mBtn.addEventListener('click', function () {
-        newLi.innerText = count + ". " + name + " " + twoDecimal(area) / 10 + "m";
+        newLi.innerText = count + ". " + name + " " + twoDecimal(area/10)  + "m";
         newLi.appendChild(newSup);
     });
 }
