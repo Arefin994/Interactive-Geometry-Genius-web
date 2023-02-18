@@ -68,7 +68,7 @@ function calculateTriangleArea() {
     const b = document.getElementById("tri-b").value;
     const h = document.getElementById("tri-h").value;
     if (isPosNumber(b,h)) {
-        const area = commonAreaRule(parseInt(b), parseInt(h));
+        const area = commonAreaRule(b, h);
         document.getElementById("tri-area").innerHTML = "Area = " + twoDecimal(area) + " sq.cm";
         count++;
         areaDisplay('Triangle', area);
