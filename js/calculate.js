@@ -136,6 +136,7 @@ function calculateEllipseArea() {
     const b = document.getElementById("ell-b").value;
     if (isPosNumber(a, b)) {
         const area = Math.PI * a * b;
+        twoDecimal(area)
         document.getElementById("ell-area").innerHTML = "Area = " + twoDecimal(area) + " sq.cm";
         count++;
         areaDisplay('Ellipse', area);
