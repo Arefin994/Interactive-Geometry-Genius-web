@@ -9,11 +9,19 @@ function commonAreaRule(a, b) {
 }
 //Checks if the input is a Positive Number or not.
 function isPosNumber(a, b) {
-    if (typeof a === 'number' && typeof b === 'number' && !isNaN(a) && !isNaN(b) && a >= 0 && b >= 0) {
-        return true;
+    if (isNaN(a) || isNaN(b)) {
+      return false;
     }
-    return false;
-}
+    
+    if (a >= 0 && b >= 0) {
+      return true;
+    } else {
+      alert("Please enter a positive number.");
+      return false;
+    }
+  }
+  
+  
 //If the Input is a negative number or NaN then will display the Modal.
 function notPosNumber(){
     const modal = document.getElementById("myModal");
@@ -28,7 +36,7 @@ let count = 0;
 function areaDisplay(name, area) {
     const ulElement = document.getElementById("areaShow");
     let newLi = document.createElement("li");
-    newLi.classList.add('list-group-item', 'd-flex', 'text-center');
+    newLi.classList.add('list-group-item', 'd-flex', 'text-center','justify-content-center');
     let newLiText = document.createTextNode(count + ". " + name + " " + twoDecimal(area) + "cm");
 
     console.log(newLiText);
